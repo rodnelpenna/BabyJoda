@@ -1,0 +1,15 @@
+<template>
+    <div class="wrapper">
+        <header class="header">Mandalorian Requests</header>
+        <section class="content" >
+            <div class="columns">
+                <main class="main">
+                    <c-cases-list oncaseselected={handleMandCaseSelected}></c-cases-list>
+                </main>
+                <aside class="sidebar-second">
+                    <c-case-details case-id={mandCaseId}></c-case-details>
+                </aside>
+            </div>
+        </section>
+    </div>
+</template>

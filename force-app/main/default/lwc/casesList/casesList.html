@@ -1,0 +1,19 @@
+<template>
+    <div class="container">
+        <template if:true={mandCases}>
+            <template for:each={mandCases} for:item="mandc">
+                <c-case-title 
+                    key={mandc.IdC} 
+                    mand-case-id={mandc.IdC}
+                    mand-case-name={mandc.Name}
+                    mand-case-subject={mandc.Subject}
+                    oncaseclick={handleClick}
+                >
+                </c-case-title>
+            </template>
+        </template>
+        <template if:false={mandCases}>
+            <div>No cases found</div>
+        </template>
+    </div>
+</template>

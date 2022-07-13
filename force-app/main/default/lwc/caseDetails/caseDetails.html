@@ -1,0 +1,20 @@
+<template>
+    <template if:true={mandCase}>
+        <div class="slds-card">
+            <div>Planet Name: {mandCase.Name}</div>
+            <br/>            
+            <div>Subject: {mandCase.Subject}</div>            
+            <br/>
+            <div>Access Code: {mandCase.AccessCode}</div>            
+            <br/>
+            <div>Successful Scan: {mandCase.Successful_Scan}</div>
+            <br/>
+            <div>
+                <lightning-button class="slds-m-left_x-small" onclick={handleScan} label="Escaneo interplanetario"></lightning-button>
+            </div>
+        </div>                
+    </template>
+    <template if:false={mandCase}>
+        <div>Select the case to view details</div>
+    </template>
+</template>
